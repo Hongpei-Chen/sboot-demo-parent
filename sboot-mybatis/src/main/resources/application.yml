@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.100.230/sboot?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+
+#mybatis配置
+mybatis-plus:
+  #Mapper映射文件位置
+  mapper-locations: classpath*:mapper/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  type-aliases-package: org.chp.sboot.mybatis.domain
+  global-config:
+    db-config:
+      #主键类型
+      id-type: auto
+      #字段策略
+      field-strategy: not_empty
+
+
+

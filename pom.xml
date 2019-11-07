@@ -7,6 +7,8 @@
         <module>sboot-mixed</module>
         <module>sboot-swagger</module>
         <module>sboot-test</module>
+        <module>sboot-data-jpa</module>
+        <module>sboot-mybatis</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -41,6 +43,13 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>

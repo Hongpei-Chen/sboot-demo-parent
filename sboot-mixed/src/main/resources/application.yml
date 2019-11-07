@@ -1,0 +1,8 @@
+server:
+  port: 8081
+
+#多环境配置
+#jar 包启动的环境设置 java -jar xxxx.jar --spring.profiles.active=pro
+#spring:
+#  profiles:
+#    active: dev
