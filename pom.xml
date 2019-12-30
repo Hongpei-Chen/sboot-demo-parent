@@ -9,6 +9,16 @@
         <module>sboot-test</module>
         <module>sboot-data-jpa</module>
         <module>sboot-mybatis</module>
+        <module>sboot-redis</module>
+        <module>sboot-mongodb</module>
+        <module>sboot-security</module>
+        <module>sboot-cache</module>
+        <module>sboot-mail</module>
+        <module>sboot-rabbitmq</module>
+        <module>sboot-dubbo</module>
+        <module>sboot-casbin</module>
+        <module>sboot-servlet-web</module>
+        <module>sboot-timer</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

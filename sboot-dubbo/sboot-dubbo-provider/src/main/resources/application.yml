@@ -1,0 +1,11 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: sboot-dubbo-provider
+  dubbo:
+    server: true
+    #不使用注册中心，直连方式(测试使用)
+    #registry: N/A
+    registry: zookeeper://192.168.100.231:2181

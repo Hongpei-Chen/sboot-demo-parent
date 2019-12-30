@@ -1,0 +1,8 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: sboot-dubbo-consumer
+  dubbo:
+    registry: zookeeper://192.168.100.231:2181

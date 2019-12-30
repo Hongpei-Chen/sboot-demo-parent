@@ -1,0 +1,17 @@
+server:
+  port: 8082
+
+#配置邮件的支持
+spring:
+  mail:
+    host: smtp.qq.com
+    username:
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
