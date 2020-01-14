@@ -1,7 +1,11 @@
 package org.chp.sboot.mybatis;
 
+import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.crypto.digest.MD5;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import org.chp.sboot.mybatis.dao.MenuDao;
 import org.chp.sboot.mybatis.dao.UserDao;
+import org.chp.sboot.mybatis.domain.Menu;
 import org.chp.sboot.mybatis.domain.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -24,12 +29,24 @@ public class MybatisApplicationTest {
     @Autowired
     private UserDao userDao;
 
+    @Autowired
+    private MenuDao menuDao;
+
     @Test
     public void testFindList(){
-        List<User> users = userDao.findAll();
+//        User user = userDao.findByUsername("上水");
+//        System.out.println(user);
 
-        System.out.println(users);
-        System.out.println(users.size());
+//        IPage<User> userIPage = userDao.findAll(1, 2);
+//        System.out.println(userIPage.getRecords().size());
+
+
+//        userDao.updateUserName(1, "李龙");
+
+        User user =new User();
+        user.setPassword("123456");
+
+        userDao.updateBatchUser(user, Arrays.asList(1, 2, 3, 4));
     }
 
     @Test
@@ -50,5 +67,17 @@ public class MybatisApplicationTest {
         User user = userDao.findById(1);
         System.out.println(user);
     }
+
+    @Test
+    public void testFindMenus() {
+        List<Menu> menuList = menuDao.findAll("系统", false);
+        System.out.println("菜单：" + menuList.size());
+        if (CollectionUtil.isNotEmpty(menuList)) {
+            menuList.forEach(menu -> System.out.println(menu));
+        }
+
+    }
+
+
 
 }

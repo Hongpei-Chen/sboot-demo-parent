@@ -19,6 +19,7 @@
         <module>sboot-casbin</module>
         <module>sboot-servlet-web</module>
         <module>sboot-timer</module>
+        <module>sboot-args</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
