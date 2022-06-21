@@ -13,7 +13,7 @@
     <description>spring boot 与 mybatis的整合</description>
 
     <properties>
-        <mysql.driver.version>8.0.17</mysql.driver.version>
+        <mysql.driver.version>8.0.28</mysql.driver.version>
     </properties>
 
     <dependencies>
