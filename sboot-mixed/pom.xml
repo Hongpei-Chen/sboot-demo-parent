@@ -14,7 +14,7 @@
     <description>spring boot 各种模块集合</description>
 
     <properties>
-        <mysql.driver.version>8.0.17</mysql.driver.version>
+        <mysql.driver.version>8.0.28</mysql.driver.version>
         <swagger2.version>2.9.2</swagger2.version>
     </properties>
 
