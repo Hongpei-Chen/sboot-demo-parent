@@ -13,7 +13,7 @@
     <description>spring data jpa 访问数据库</description>
 
     <properties>
-        <mysql.driver.version>8.0.17</mysql.driver.version>
+        <mysql.driver.version>8.0.28</mysql.driver.version>
     </properties>
 
     <!-- 数据库依赖包 -->
